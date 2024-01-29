@@ -50,30 +50,42 @@ const Login = ({ setIsAuthenticated }) => {
   };
 
   return (
-    <div className="small-container">
-      <form onSubmit={handleLogin}>
-        <h1>Admin Login</h1>
-        <label htmlFor="email">Email</label>
-        <input
-          id="email"
-          type="email"
-          name="email"
-          placeholder="admin@example.com"
-          value={email}
-          onChange={e => setEmail(e.target.value)}
-        />
-        <label htmlFor="password">Password</label>
-        <input
-          id="password"
-          type="password"
-          name="password"
-          placeholder="qwerty"
-          value={password}
-          onChange={e => setPassword(e.target.value)}
-        />
-        <input style={{ marginTop: '12px' }} type="submit" value="Login" />
-      </form>
+    <section style={{backgroundColor:'#7A947E'}}> 
+    <div style={{marginLeft:'300px', marginRight:'300px'}}> 
+
+    <div className="container flex-row">
+    <div className='flex-large'>
+        <div style={{ marginTop: '20px' }}>
+          <img src="/src/assets/LOGO_RECYAPP.svg" alt="logo" style={{ width: '100vh', height: '85%', marginRight:'50px'}} />
+        </div>
+      </div>
+      <div className='flex-large' style={{display:'flex', flexDirection:'column', justifyContent:'space-evenly', backgroundColor:'#7A947E'}}>
+        <form onSubmit={handleLogin}>
+          <h1>Iniciar Sesión</h1>
+          <label htmlFor="email">Email</label>
+          <input
+            id="email"
+            type="email"
+            name="email"
+            placeholder="admin@example.com"
+            value={email}
+            onChange={e => setEmail(e.target.value)}
+          />
+          <label htmlFor="password">Password</label>
+          <input
+            id="password"
+            type="password"
+            name="password"
+            placeholder="qwerty"
+            value={password}
+            onChange={e => setPassword(e.target.value)}
+          />
+          <input style={{ marginTop: '12px'}} type="submit" value="Login" />
+        </form>
+      </div>
     </div>
+    </div>
+    </section>
   );
 };
 
