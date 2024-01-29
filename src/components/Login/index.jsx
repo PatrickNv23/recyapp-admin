@@ -56,7 +56,7 @@ const Login = ({ setIsAuthenticated }) => {
     <div className="container flex-row">
     <div className='flex-large'>
         <div style={{ marginTop: '20px' }}>
-          <img src="/src/assets/LOGO_RECYAPP.svg" alt="logo" style={{ width: '100vh', height: '85%', marginRight:'50px'}} />
+          <img src="/src/assets/LOGO_RECYAPP.svg" alt="logo" style={{ width: '100vh', height: 'auto', marginRight:'50px'}} />
         </div>
       </div>
       <div className='flex-large' style={{display:'flex', flexDirection:'column', justifyContent:'space-evenly', backgroundColor:'#7A947E'}}>
