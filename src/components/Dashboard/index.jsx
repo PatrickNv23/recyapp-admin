@@ -51,7 +51,7 @@ const Dashboard = ({ setIsAuthenticated }) => {
         await deleteDoc(doc(db, "Usuario", Usuario.id))
         //console.log("prueba")
 
-        getAuth().deleteUser(Usuario.id)
+        //getAuth().deleteUser(Usuario.id)
 
         /*
         await deleteUser(Usuario)
@@ -71,6 +71,14 @@ const Dashboard = ({ setIsAuthenticated }) => {
         });
         const usuariosCopy = usuario.filter(usuario => usuario.id !== id);
         setUsuarios(usuariosCopy);
+      } else {
+        Swal.fire({
+          icon: 'success',
+          title: 'Eliminación cancelada',
+          text: 'Cancelado',
+          showConfirmButton: false,
+          timer: 1500
+        })
       }
     });
   };
