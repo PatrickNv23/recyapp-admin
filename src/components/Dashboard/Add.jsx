@@ -70,7 +70,7 @@ const Add = ({ Usuario, setUsuarios, setIsAdding, getUsuarios }) => {
     Usuario.push(newUsuario);
     setUsuario(usuario);
     setIsAdding(false);
-    getUsuarios();
+    await getUsuarios();
 
     Swal.fire({
       icon: "success",
@@ -88,6 +88,7 @@ const Add = ({ Usuario, setUsuarios, setIsAdding, getUsuarios }) => {
         <label htmlFor="nombrecompleto">Nombre completo</label>
         <input
           id="nombrecompleto"
+          placeholder="Ingrese su nombre completo"
           type="text"
           name="nombrecompleto"
           value={nombrecompleto}
@@ -97,6 +98,7 @@ const Add = ({ Usuario, setUsuarios, setIsAdding, getUsuarios }) => {
         <input
           id="usuario"
           type="text"
+          placeholder="Ingrese su nombre de usuario"
           name="usuario"
           value={usuario}
           onChange={(e) => setUsuario(e.target.value)}
@@ -106,6 +108,7 @@ const Add = ({ Usuario, setUsuarios, setIsAdding, getUsuarios }) => {
           id="email"
           type="email"
           name="email"
+          placeholder="Ingrese su correo"
           value={correo}
           onChange={(e) => setCorreo(e.target.value)}
         />
@@ -114,13 +117,15 @@ const Add = ({ Usuario, setUsuarios, setIsAdding, getUsuarios }) => {
           id="puntos"
           type="number"
           name="puntos"
+          placeholder="Ingrese sus puntos"
           value={puntos}
           onChange={(e) => setPuntos(e.target.value)}
         />
         <label htmlFor="contrasenia">Contraseña</label>
         <input
           id="contrasenia"
-          type="text"
+          type="password"
+          placeholder="Ingrese su contrasenia"
           name="contrasenia"
           value={contrasenia}
           onChange={(e) => setContrasenia(e.target.value)}

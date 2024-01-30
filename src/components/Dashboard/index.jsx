@@ -100,7 +100,7 @@ const Dashboard = ({ setIsAuthenticated }) => {
       )}
       {isAdding && (
         <Add
-          usuario={usuario}
+          Usuario={usuario}
           setUsuarios={setUsuarios}
           setIsAdding={setIsAdding}
           getUsuarios={getUsuarios}

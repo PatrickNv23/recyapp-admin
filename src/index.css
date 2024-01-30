@@ -891,6 +891,22 @@ a.muted-button {
   color: #4e4e4e;
 }
 
+.edit-button,
+.delete-button {
+  border: 1px solid #cdcdcd;
+  color: #4e4e4e;
+}
+
+.edit-button {
+  background-color: darkorange;
+}
+
+.delete-button {
+  background-color: rgb(223, 79, 54);
+}
+
+
+
 .muted-button:hover,
 .muted-button:focus,
 .muted-button:active,

@@ -6,11 +6,9 @@ const Table = ({ usuario, handleEdit, handleDelete }) => {
       <table className="striped-table">
         <thead>
           <tr>
-            <th>Id</th>
             <th>Nombre Completo</th>
             <th>Usuario</th>
             <th>Correo</th>
-            <th>Contraseña</th>
             <th>Puntos</th>
             <th colSpan={2} className="text-center">
               Acción
@@ -21,16 +19,14 @@ const Table = ({ usuario, handleEdit, handleDelete }) => {
           {usuario ? (
             usuario.map((Usuario, i) => (
               <tr key={Usuario.id}>
-                <td>{Usuario.id}</td>
                 <td>{Usuario.nombrecompleto}</td>
                 <td>{Usuario.usuario}</td>
                 <td>{Usuario.correo}</td>
-                <td>{Usuario.contrasenia} </td>
                 <td>{Usuario.puntos} </td>
                 <td className="text-right">
                   <button
                     onClick={() => handleEdit(Usuario.id)}
-                    className="button muted-button"
+                    className="button edit-button"
                   >
                     Editar
                   </button>
@@ -38,7 +34,7 @@ const Table = ({ usuario, handleEdit, handleDelete }) => {
                 <td className="text-left">
                   <button
                     onClick={() => handleDelete(Usuario.id)}
-                    className="button muted-button"
+                    className="button delete-button"
                   >
                     Eliminar
                   </button>
